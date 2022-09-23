@@ -1,0 +1,48 @@
+.stage{
+
+    @include section();
+
+    background-color: $primaryColor;
+    &__wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+
+        @media ($tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__title{
+        @include h1();
+    }
+
+    &__list{
+        @include lead();
+        
+        &-item{
+            padding-left: 0.5rem;
+            list-style: url('../images/check_icon.png');
+        }
+    }
+
+    &__img{
+
+        @include img($white);
+        height: 21.4rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        margin-left: 4;
+
+        @media ($tablet) {
+            max-width: 300px;
+            margin-bottom: 0;
+            margin-left: 8rem;
+        }
+        
+        @media ($dekstop) {
+            max-width: 469px;
+            margin-bottom: 0;
+        }
+    }
+}
